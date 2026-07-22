@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MotoManager - Prototipo comercial SaaS para talleres de motocicletas" />
+  <title>MotoManager | Prototipo Premium</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <img src="assets/motomanager-logo.png" alt="MotoManager" />
+      </div>
+
+      <div class="workspace-card">
+        <span class="workspace-icon">NT</span>
+        <div>
+          <strong>MotoManager Demo</strong>
+          <small>Taller principal</small>
+        </div>
+        <button class="icon-btn" aria-label="Cambiar empresa">⌄</button>
+      </div>
+
+      <nav class="nav-menu">
+        <p class="nav-label">OPERACIÓN</p>
+        <a class="nav-item active" href="#dashboard" data-route="dashboard"><span>⌂</span>Dashboard</a>
+        <a class="nav-item" href="#agenda" data-route="agenda"><span>▦</span>Agenda de taller</a>
+        <a class="nav-item" href="#recepcion" data-route="recepcion"><span>↳</span>Recepción</a>
+        <a class="nav-item" href="#ordenes" data-route="ordenes"><span>◫</span>Órdenes de trabajo <b class="nav-count">18</b></a>
+        <a class="nav-item" href="#cotizaciones" data-route="cotizaciones"><span>▤</span>Cotizaciones</a>
+
+        <p class="nav-label">GESTIÓN</p>
+        <a class="nav-item" href="#clientes" data-route="clientes"><span>♙</span>Clientes</a>
+        <a class="nav-item" href="#motos" data-route="motos"><span>◉</span>Motocicletas</a>
+        <a class="nav-item" href="#tecnicos" data-route="tecnicos"><span>⚙</span>Técnicos</a>
+        <a class="nav-item" href="#inventario" data-route="inventario"><span>▣</span>Inventario</a>
+        <a class="nav-item" href="#compras" data-route="compras"><span>⇣</span>Compras</a>
+        <a class="nav-item" href="#proveedores" data-route="proveedores"><span>⌂</span>Proveedores</a>
+        <a class="nav-item" href="#facturas" data-route="facturas"><span>▥</span>Facturas y pagos</a>
+
+        <p class="nav-label">ANÁLISIS</p>
+        <a class="nav-item" href="#reportes" data-route="reportes"><span>↗</span>Reportes</a>
+        <a class="nav-item" href="#contai" data-route="contai"><span>⇄</span>Exportación Contai</a>
+        <a class="nav-item" href="#portal" data-route="portal"><span>◇</span>Portal del cliente</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="support-card">
+          <span class="support-icon">?</span>
+          <div><strong>¿Necesitas ayuda?</strong><small>Soporte NautilusTech</small></div>
+        </div>
+        <div class="user-card">
+          <div class="avatar">JA</div>
+          <div><strong>Juan Administrador</strong><small>Administrador</small></div>
+          <button class="icon-btn">⋮</button>
+        </div>
+      </div>
+    </aside>
+
+    <div class="main-area">
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle">☰</button>
+        <div class="global-search">
+          <span>⌕</span>
+          <input id="globalSearch" placeholder="Buscar placa, cliente, orden o repuesto..." />
+          <kbd>Ctrl K</kbd>
+        </div>
+        <div class="top-actions">
+          <button class="icon-btn notification-btn">♢<span class="notification-dot"></span></button>
+          <button class="btn btn-primary" data-action="new-reception">＋ Nueva recepción</button>
+        </div>
+      </header>
+
+      <main id="content" class="content"></main>
+    </div>
+  </div>
+
+  <div class="toast-stack" id="toastStack"></div>
+
+  <div class="modal-backdrop hidden" id="modalBackdrop">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
